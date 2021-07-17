@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,16 +7,16 @@
       <link rel="stylesheet" href=
 "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body style="background-image:url('red-rose.jpg')">
+{% block body %}<body style="background-image:url({% static 'red-rose.jpg' %})">{% endblock %}
 
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;" >
  <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" href="#"><h4>Home</h4></a>
+    <a class="nav-link active" href="home"><h4>Home</h4></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#"><h4>About</h4></a>
+    <a class="nav-link" href="about"><h4>About</h4></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#"><h4>Education</h4></a>
@@ -26,6 +27,8 @@
 </ul>
 
     </nav>
+{% block content %}
+{% endblock %}
 
 </body>
 </html>
