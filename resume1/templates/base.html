@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-{% load static %}
+{% load static%}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-      <link rel="stylesheet" href=
-"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <meta charset="UTF-8">
+      <title>Title</title>
+         <link rel="stylesheet" href=
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
 </head>
-{% block body %}<body style="background-image:url({% static 'red-rose.jpg' %})">{% endblock %}
+      <body style="background-image:url({% static 'hero-bg.jpg' %});">
+        <nav class="navbar navbar-light" style="background-color: default;" >
+         <ul class="nav justify-content-end">
 
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;" >
- <ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="home"><h4>Home</h4></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="about"><h4>About</h4></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#"><h4>Education</h4></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#"><h4>Job</h4></a>
-  </li>
-</ul>
+            <li class="nav-item" >
 
-    </nav>
-{% block content %}
+           <a class="nav-link active" href="{% url 'home' %}" ><h4><div style="border:3px solid; border-radius:15px; color:white; ">Home</div> </h4></a>
+
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="about" ><h4><div style="border:3px solid; border-radius:15px; color:white; ">About</div></h4></a>
+           </li>
+              <li class="nav-item">
+                <a class="nav-link" href="project"><h4><div style="border:3px solid; border-radius:10px; color:white; ">Projects</div></h4></a>
+              </li>
+             <li class="nav-item">
+                <a class="nav-link" href="skills"><h4><div style="border:3px solid; border-radius:10px; color:white; ">Skills</div></h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact"><h4><div style="border:3px solid; border-radius:12px; color:white ">contact</div></h4></a>
+                </div>
+              </li>
+              </ul>
+              </nav>
+      {% block content %}
 {% endblock %}
-
-</body>
+            </body>
 </html>

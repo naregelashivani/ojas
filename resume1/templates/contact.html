@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+
+<br>
+
+</body>
+ <div class="row justify-content-end">
+   <div class="col-4" style="background-color:rgba(0,0,0,0.7);color:white;">
+     <form  method="POST" id="usrform">
+         {% csrf_token %}
+         <br>
+         <br>
+         <table>
+             <tr>
+                 <td>Name:</td>
+                 <td><input type="text" style="width: 375px;" id="usrname" name="usrname"></td>
+             </tr>
+            <tr>
+                <td>Email: </td>
+                <td> <input type="text" style="width: 375px;"  id="email id" name="email id"></td>
+            </tr>
+             <tr>
+                 <td>Contact:</td>
+                 <td><input type="text" style="width: 375px;" id="number" name="number"></td>
+             </tr>
+             <tr>
+                 <td>Messages:</td>
+                 <td><textarea rows="" cols="50" id="comment" name="comment" form="usrform">Enter text here...</textarea></td>
+             </tr>
+         </table>
+         <center><button type="submit" class="btn btn-success">Submit</button></center>
+     </form>
+   </div>
+    <div class="col-4" >
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.768744860972!2d78.38233503968625!3d17.42132935228311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915b1d6a9f89%3A0xf5e18f0488344307!2sOjas%20Innovative%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1626930633214!5m2!1sen!2sin" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+ </div>
+
+{% endblock %}
