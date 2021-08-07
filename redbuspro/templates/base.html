@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration</title>
+    <link rel="stylesheet" href="{%static 'redapp/css/bootstrap.css' %}">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-centre alert alert-danger">Ticket  Registration</h2>
+    {% block content %}
+    {% endblock content %}
+</div>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
